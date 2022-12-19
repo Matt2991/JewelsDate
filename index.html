@@ -1,14 +1,64 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Julia's Due Date</title>
-		<!-- style sheet import -->
-		<link rel="stylesheet" href="stylez.css">
-	</head>
-	<body>
-		<h1 style="color:blue;text-align:center;">Julia's Arrival</h1>
-		<!-- countdown timer -->
-		<p id="demo"/>
-		<script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Sonogram {background-color: red;}
+#DueDate {background-color: green;}
+#Registry {background-color: blue;}
+#About {background-color: orange;}
+</style>
+		</head>
+		<body>
+			<button class="tablink" onclick="openPage('Sonogram', this, 'red')">Sonogram</button>
+			<button class="tablink" onclick="openPage('DueDate', this, 'green')" id="defaultOpen">Due Date</button>
+			<button class="tablink" onclick="openPage('Registry', this, 'blue')">Registry</button>
+			<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+			<div id="Sonogram" class="tabcontent">
+				<h3>Sonogram</h3>
+				<p>Sonogram is where the heart is..</p>
+			</div>
+			<div id="DueDate" class="tabcontent">
+				<h3>Due Date</h3>
+				<p>
+					<!-- countdown timer -->
+					<p id="demo"/>
+					<script>
 		// Set the date we're counting down to
 		var countDownDate = new Date("Apr 22, 2023 06:00:00").getTime();
 
@@ -33,10 +83,24 @@
 
 		// If the count down is finished, write some text
 		if (distance < 0) { clearInterval(x); document.getElementById("demo").innerHTML="MY GIRL" ; } }, 1000);
-		</script>
-		<!-- create backwords date here (lol) and add baby pictures -->
-		<h2>SubHeading&lth2&gt</h2>
-		<p>another &ltp&gt<br>just used a break &ltbr&gt<hr>Previously just used an &lthr&gt
-	</p>
-			</body>
-		</html>
+					</script>
+					<!-- create backwords date here (lol) and add baby pictures -->
+				</p>
+			</div>
+			<div id="Registry" class="tabcontent">
+				<h3>Registry</h3>
+				<p>Registry, or swing by for a cup of coffee.</p>
+			</div>
+			<div id="About" class="tabcontent">
+				<h3>About</h3>
+				<p>Who we are and what we do.</p>
+			</div>
+			<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display="none" ; } tablinks=document.getElementsByClassName("tablink" ); for (i=0; i
+				< tablinks.length; i++) { tablinks[i].style.backgroundColor="" ; } document.getElementById(pageName).style.display="block" ; elmnt.style.backgroundColor=color; } Get the element with id="defaultOpen" and click on it document.getElementById("defaultOpen").click();
+			</script>
+		</body>
+	</html> 
