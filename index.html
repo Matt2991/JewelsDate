@@ -41,6 +41,30 @@ body, html {
 #DueDate {background-color: #B784A7;}
 #Registry {background-color: #aa3c87;}
 #About {background-color: #8c316f;}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -51,13 +75,18 @@ body, html {
 <button class="tablink" onclick="openPage('About', this, '#8c316f')">About</button>
 
 <div id="Sonogram" class="tabcontent">
-  <h3>Sonogram</h3>
-  <p>Sonogram is where the heart is..</p>
+<h1 style="font-style: italic"><center>Matt and Kylie's baby Julia</center></h1>
+  <h3><center>Sonogram</center></h3><hr color="white">
+  <h4><center>09/23/2022</center></h4>
+  <p><center><img src="9-23-2022c.jpg" alt="HTML tutorial" style="width:200px;height:200px;"></center></p>
+  <p><center><img src="9-23-2022a.jpg" alt="HTML tutorial" style="width:200px;height:200px;"></center></p>
+  <p><center><img src="9-23-2022b.jpg" alt="HTML tutorial" style="width:200px;height:200px;"></center></p>
 </div>
 
 <div id="DueDate" class="tabcontent">
-  <h3>Due Date</h3>
-  <p><!-- countdown timer -->
+<h1 style="font-style: italic"><center>Matt and Kylie's baby Julia</center></h1>
+  <h3><center>Due Date April 22, 2023</center></h3><hr color="white">
+  <p><center><!-- countdown timer -->Time until birth:
 		<p id="demo"/>
 		<script>
 		// Set the date we're counting down to
@@ -85,17 +114,19 @@ body, html {
 		// If the count down is finished, write some text
 		if (distance < 0) { clearInterval(x); document.getElementById("demo").innerHTML="MY GIRL" ; } }, 1000);
 		</script>
-		<!-- create backwords date here (lol) and add baby pictures --></p> 
+		<!-- create backwords date here (lol) and add baby pictures --></center></p> 
 </div>
 
 <div id="Registry" class="tabcontent">
-  <h3>Registry</h3>
-  <p>Registry, or swing by for a cup of coffee.</p>
+<h1 style="font-style: italic"><center>Matt and Kylie's baby Julia</center></h1>
+  <h3><center>Registry</center></h3><hr color="white">
+  <p><center><a href="https://www.amazon.com/baby-reg/27LGBVWEPC0U1?ref=br_search_v2_desktop_res_1">Amazon Registry</a></center></p>
 </div>
 
 <div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
+<h1 style="font-style: italic"><center>Matt and Kylie's baby Julia</center></h1>
+  <h3><center>About</center></h3><hr color="white">
+  <p><center>Stuff</center></p>
 </div>
 
 <script>
