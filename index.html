@@ -1,227 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      /* Set height of body and the document to 100% */
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        font-family: Arial;
-      }
-
-      /* Style tab links */
-      .tablink {
-        background-color: #555;
-        color: white;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        font-size: 17px;
-        width: 25%;
-      }
-
-      .tablink:hover {
-        background-color: #777;
-      }
-
-      /* Style the tab content (and add height:100% for full page content) */
-      .tabcontent {
-        color: white;
-        display: none;
-        padding: 100px 20px;
-        height: 100%;
-      }
-
-      #Sonogram {
-        background-color: #cd70af;
-      }
-      #DueDate {
-        background-color: #b784a7;
-      }
-      #Registry {
-        background-color: #aa3c87;
-      }
-      #About {
-        background-color: #8c316f;
-      }
-
-      a:link {
-          color: white;
-          background-color: transparent;
-          text-decoration: none;
-      }
-
-      a:visited {
-        color: blue;
-        background-color: transparent;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: pink;
-        background-color: transparent;
-        text-decoration: underline;
-      }
-
-      a:active {
-        color: yellow;
-        background-color: transparent;
-        text-decoration: underline;
-      }
-    </style>
+    <!--
+      Code based on code created by Brian Design on youtube @ www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML CSS Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <button class="tablink" onclick="openPage('Sonogram', this, '#cd70af')">
-      Sonogram
-    </button>
-    <button
-      class="tablink"
-      onclick="openPage('DueDate', this, '#B784A7')"
-      id="defaultOpen"
-    >
-      Date
-    </button>
-    <button class="tablink" onclick="openPage('Registry', this, '#aa3c87')">
-      Registry
-    </button>
-    <button class="tablink" onclick="openPage('About', this, '#8c316f')">
-      About
-    </button>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/index.html" id="navbar__logo"
+          ><i class="fas fa-gem"></i>JULIA</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/date.html" class="navbar__links">Date</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Registry</a>
+          </li>
+          <li class="navbar__btn">
+            <a
+              href="https://www.amazon.com/baby-reg/27LGBVWEPC0U1?ref=br_search_v2_desktop_res_1"
+              class="button"
+              >Don't click this</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <div id="Sonogram" class="tabcontent">
-      <h1 style="font-style: italic">
-        <center>Matt and Kylie's baby Julia</center>
-      </h1>
-      <h3><center>Sonogram</center></h3>
-      <hr color="white" />
-      <h4><center>09/23/2022</center></h4>
-      <p>
-        <center>
-          <img
-            src="9-23-2022c.jpg"
-            alt="HTML tutorial"
-            style="width: 200px; height: 200px"
-          />
-        </center>
-      </p>
-      <p>
-        <center>
-          <img
-            src="9-23-2022a.jpg"
-            alt="HTML tutorial"
-            style="width: 200px; height: 200px"
-          />
-        </center>
-      </p>
-      <p>
-        <center>
-          <img
-            src="9-23-2022b.jpg"
-            alt="HTML tutorial"
-            style="width: 200px; height: 200px"
-          />
-        </center>
-      </p>
+    <!-- Hero Section -->
+    <div class="main">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>KYLIE &</h1>
+          <h2>MATT'S</h2>
+          <p>newest addition</p>
+          <button class="main__btn"><a href="#">pictures</a></button>
+        </div>
+        <div class="main__img--container">
+          <img id="main__img" src="9-23-2022a.jpg" />
+        </div>
+      </div>
     </div>
 
-    <div id="DueDate" class="tabcontent">
-      <h1 style="font-style: italic">
-        <center>Matt and Kylie's baby Julia</center>
-      </h1>
-      <h3><center>Due Date April 22, 2023</center></h3>
-      <hr color="white" />
-      <p>
-        <center>
-          <!-- countdown timer -->Time until birth:
-          <p id="demo" />
-          <script>
-            // Set the date we're counting down to
-            var countDownDate = new Date("Apr 22, 2023 06:00:00").getTime();
-
-            // Update the count down every 1 second
-            var x = setInterval(function () {
-              // Get today's date and time
-              var now = new Date().getTime();
-
-              // Find the distance between now and the count down date
-              var distance = countDownDate - now;
-
-              // Time calculations for days, hours, minutes and seconds
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor(
-                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-              );
-              var minutes = Math.floor(
-                (distance % (1000 * 60 * 60)) / (1000 * 60)
-              );
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-              // Display the result in the element with id="demo"
-              document.getElementById("demo").innerHTML =
-                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-              // If the count down is finished, write some text
-              if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "MY GIRL";
-              }
-            }, 1000);
-          </script>
-          <!-- create backwords date here (lol) and add baby pictures -->
-        </center>
-      </p>
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/index.html" id="footer__logo"
+              ><i class="fas fa-gem"></i>JULIA</a
+            >
+          </div>
+          <p class="website__rights">© LEGITIMATE 2022</p>
+          <div class="social__icons">
+            <a
+              class="social__icon--link"
+              href="https://www.linkedin.com/in/matthew-w-761347146"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <div id="Registry" class="tabcontent">
-      <h1 style="font-style: italic">
-        <center>Matt and Kylie's baby Julia</center>
-      </h1>
-      <h3><center>Registry</center></h3>
-      <hr color="white" />
-      <p>
-        <center>
-          <a
-            href="https://www.amazon.com/baby-reg/27LGBVWEPC0U1?ref=br_search_v2_desktop_res_1"
-            >Amazon Registry</a
-          >
-        </center>
-      </p>
-    </div>
-
-    <div id="About" class="tabcontent">
-      <h1 style="font-style: italic">
-        <center>Matt and Kylie's baby Julia</center>
-      </h1>
-      <h3><center>About</center></h3>
-      <hr color="white" />
-      <p><center>Stuff</center></p>
-    </div>
-
-    <script>
-      function openPage(pageName, elmnt, color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
-        }
-        document.getElementById(pageName).style.display = "block";
-        elmnt.style.backgroundColor = color;
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
