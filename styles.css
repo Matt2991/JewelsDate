@@ -94,17 +94,17 @@ body {
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #f77062;
+  background: #be37b8;
   color: #fff;
 }
 
 .button:hover {
-  background: #4837ff;
+  background: #e877ff;
   transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-  color: #f77062;
+  color: #e970cf;
   transition: all 0.3s ease;
 }
 
@@ -259,7 +259,7 @@ body {
 
 .main__btn {
   font-size: 1rem;
-  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
   padding: 14px 32px;
   border: none;
   border-radius: 4px;
@@ -285,7 +285,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #4837ff;
+  background: #be37b8;
   transition: all 0.35s;
   border-radius: 4px;
 }
@@ -495,7 +495,7 @@ body {
 /* pictures */
 .img-gallery {
   width: 80%;
-  margin: 100px auto 50px;
+  margin: 40px auto 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 30px;
@@ -537,4 +537,13 @@ body {
   font-size: 30px;
   color: #fff;
   cursor: pointer;
+}
+
+.imagep {
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2rem;
 }
