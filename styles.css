@@ -99,12 +99,12 @@ body {
 }
 
 .button:hover {
-  background: #4837ff;
+  background: #e877ff;
   transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-  color: #be37b8;
+  color: #e970cf;
   transition: all 0.3s ease;
 }
 
@@ -285,7 +285,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #4837ff;
+  background: #be37b8;
   transition: all 0.35s;
   border-radius: 4px;
 }
@@ -543,7 +543,7 @@ body {
   color: white;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1.2rem;
 }
