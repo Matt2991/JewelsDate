@@ -94,7 +94,7 @@ body {
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #f77062;
+  background: #be37b8;
   color: #fff;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .navbar__links:hover {
-  color: #f77062;
+  color: #be37b8;
   transition: all 0.3s ease;
 }
 
